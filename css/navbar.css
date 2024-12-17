@@ -1,0 +1,31 @@
+nav {
+    position: fixed;
+    bottom: 0;
+    background-color: grey;
+    width: 100vw;
+    height: minmax(30px, 25%);
+    display: grid;
+    grid-template-columns: 50% 
+}
+
+#dropdown {
+    display: inline-block;
+}
+
+.filterItem {
+    display: none;
+}
+
+.pageButton {
+    width: 30px;
+}
+
+#backAndNextPage {
+    display: inline-block;
+    float: right;
+}
+
+#nextBtn {
+    transform: rotate(180deg);
+    
+}

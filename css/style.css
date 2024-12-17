@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    padding: 0;
+
+}
+
+.dark-mode {
+    background-color: rgb(46, 46, 46);
+    color: white;
+}
+
+.light-mode {
+    background-color: white;
+    color: black;
+}
+

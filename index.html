@@ -4,10 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metagrabber</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
 </head>
 <body>
     <h1>Metadata grabber</h1>
-    <script src="main.js"></script>
+    <nav>
+        <div id="navbarContainer">
+            <div id="dropdown">
+                <ul id="filters">Filter
+                    <li class="filterItem">Option</li>
+                    <li class="filterItem">Option</li>
+                    <li class="filterItem">Option</li>
+                    <li class="filterItem">Option</li>
+                    <li class="filterItem">Option</li>
+                </ul>                
+            </div>
+            <div id="pageNumber"></div>
+            <div id="backAndNextPage">
+                <img class="pageButton" id="backBtn" src="assets/images/less-than.png">
+                <img class="pageButton" id="nextBtn" src="assets/images/less-than.png">
+            </div>
+        </div>
+    </nav>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>

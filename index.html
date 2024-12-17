@@ -13,7 +13,8 @@
     <nav>
         <div id="navbarContainer">
             <div id="dropdown">
-                <ul id="filters">Filter
+                <p id="filterLabel">Filter</p>
+                <ul id="filters" class="closeFilter">
                     <li class="filterItem">Option</li>
                     <li class="filterItem">Option</li>
                     <li class="filterItem">Option</li>
@@ -21,11 +22,16 @@
                     <li class="filterItem">Option</li>
                 </ul>                
             </div>
-            <div id="pageNumber"></div>
-            <div id="backAndNextPage">
-                <img class="pageButton" id="backBtn" src="assets/images/less-than.png">
-                <img class="pageButton" id="nextBtn" src="assets/images/less-than.png">
+            <div id="backPage" class="pageBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>
             </div>
+            <div id="pageNumber">
+                <span>1 of 2</span>
+            </div>
+            <div id="nextPage" class="pageBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
+            </div>
+           
         </div>
     </nav>
 

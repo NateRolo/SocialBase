@@ -4,28 +4,53 @@ nav {
     background-color: grey;
     width: 100vw;
     height: minmax(30px, 25%);
+    
+}
+
+#navbarContainer {
     display: grid;
-    grid-template-columns: 50% 
+    grid-template-columns: 50% 15% 20% 15%;
+    grid-template-rows: 1fr;
+    width: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }
 
 #dropdown {
-    display: inline-block;
+    position: relative;
 }
 
-.filterItem {
+#filterLabel {
+    vertical-align: middle;
+    margin: 10px;
+}
+
+
+
+.openFilter {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+}
+
+.closeFilter {
     display: none;
 }
 
-.pageButton {
-    width: 30px;
+.pageBtn {
+    margin: auto;
 }
 
-#backAndNextPage {
-    display: inline-block;
-    float: right;
+.pageBtn:hover {
+    cursor: pointer; 
 }
 
-#nextBtn {
-    transform: rotate(180deg);
-    
+svg:active {
+    fill: black;
+}
+
+#pageNumber {
+    margin: auto;   
 }

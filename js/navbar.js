@@ -5,11 +5,9 @@ function openFilterWindow() {
 };
 
 function closeFilterWindow() {
+    if (filters.classList.contains("openFilter")){ 
     filters.classList.replace("openFilter", "closeFilter");
-};
-
-function filterWindows() {
-    
+    }
 };
 
 document.getElementById("filterLabel").addEventListener("click", () => {
@@ -20,3 +18,13 @@ document.getElementById("filterLabel").addEventListener("click", () => {
         closeFilterWindow();
     }
 });
+
+
+// edit to match my elements
+
+// window.onclick = function(e){
+//     if (!e.target.matches('.dropdown') && 
+//           dropDownWindow.classList.contains('dropdown__window--active')){
+//         dropDownWindow.classList.remove('dropdown__window--active')
+//    }
+//  }

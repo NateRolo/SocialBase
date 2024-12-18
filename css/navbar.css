@@ -25,17 +25,29 @@ nav {
     margin: 10px;
 }
 
+#filters {
+    background-color: grey;
+    text-align: left;
+    padding-right: 14px;
+    padding-left: 7px;
+}
 
+.filterItem {
+    margin: 5px 0;
+}
 
 .openFilter {
     display: block;
     position: absolute;
     z-index: 999;
-    width: 50px;
-    height: 50px;
+    list-style-type: none;
+    bottom: 20px;
+    opacity: 100;
+    
 }
 
 .closeFilter {
+    opacity: 0;
     display: none;
 }
 

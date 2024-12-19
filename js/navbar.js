@@ -13,18 +13,9 @@ function closeFilterWindow() {
 document.getElementById("filterLabel").addEventListener("click", () => {
     if (filters.classList.contains("closeFilter")){
         openFilterWindow();
-        console.log("filter function ran");
+       
     } else {
         closeFilterWindow();
     }
 });
 
-
-// edit to match my elements
-
-// window.onclick = function(e){
-//     if (!e.target.matches('.dropdown') && 
-//           dropDownWindow.classList.contains('dropdown__window--active')){
-//         dropDownWindow.classList.remove('dropdown__window--active')
-//    }
-//  }

@@ -1,0 +1,71 @@
+.accordian {
+    width: 100vw;
+    height: 15vh;
+    background-color: rgb(35, 35, 35);
+    color: white;
+    border: none;
+    text-align: left;
+    padding: 0 18px;
+}
+
+.accordian:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 66, 66);
+    cursor: pointer;
+}
+
+.accordian:active {
+    color: black;
+    background-color: rgb(186, 186, 186);
+}
+
+.panel.active {
+    display: block;
+    max-height: 20%;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.panel {
+    display: none;
+}
+
+.subPanel {
+    padding: 18px;
+    border: 1px solid white;
+}
+
+.subPanel:hover {
+    background-color:rgb(66, 66, 66);
+}
+
+.thumbnail {
+    width: 40px;
+    object-fit: contain;
+    display: inline-block;
+    float: left;
+}
+
+.fileNumber {
+    display: inline-block;
+    font-size: .8em;
+    float: left;
+    clear: left;
+    padding: 10px 0 10px 0;
+}
+
+.fileInfo {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+    white-space: pre-line;
+}
+.filePostedDate {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    font-size: .8rem;
+}

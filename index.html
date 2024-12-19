@@ -7,17 +7,41 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/fileTab.css">
 </head>
 <body>
-    <h1>Metadata grabber</h1>
+    
+
+    <!-- Data card entry template -->
+    <template>
+
+    </template>
+    <!-- Data card template -->
+
     <div id="content">
-        <table>
-            <tr>
-                <th>
-                    
-                </th>
-            </tr>
-        </table>
+        <button class="accordian">
+            <image src="assets/images/snorlax logo.png" alt="post-thumbnail" class="thumbnail"></image>
+            <p class="fileInfo">Title
+                <span class="filePostedDate">Apr. 28, 2024</span>
+            </p>
+            
+            <span class="fileNumber">2024-0021</span>
+            </button>
+        <div class="panel">
+            <div class="subPanel instagram">
+                instagram
+            </div>
+            <div class="subPanel tiktok">
+                Tiktok
+            </div>
+            <div class="subPanel youtube">
+                Youtube
+            </div>
+            <div class="subPanel facebook">
+                Facebook
+            </div>
+        </div>
+            
     </div>
 
 
@@ -26,11 +50,11 @@
             <div id="dropdown">
                 <p id="filterLabel">Filter</p>
                 <ul id="filters" class="closeFilter">
-                    <li class="filterItem">Option 1</li>
-                    <li class="filterItem">Option 2</li>
-                    <li class="filterItem">Option 3</li>
-                    <li class="filterItem">Option 4</li>
-                    <li class="filterItem">Option 5</li>
+                    <li class="filterItem"><input type="checkbox" name="filter">Filter</li>
+                    <li class="filterItem"><input type="checkbox" name="filter">Filter</li>
+                    <li class="filterItem"><input type="checkbox" name="filter">Filter</li>
+                    <li class="filterItem"><input type="checkbox" name="filter">Filter</li>
+                    <li class="filterItem"><input type="checkbox" name="filter">Filter</li>
                 </ul>                
             </div>
             <div id="backPage" class="pageBtn">
@@ -49,5 +73,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/fileTab.js"></script>
 </body>
 </html>

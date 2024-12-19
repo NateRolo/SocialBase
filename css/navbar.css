@@ -23,6 +23,7 @@ nav {
 #filterLabel {
     vertical-align: middle;
     margin: 10px;
+    background-color: black;
 }
 
 #filters {

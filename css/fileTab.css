@@ -1,12 +1,15 @@
 .accordian {
     width: 100vw;
-    height: 15vh;
+    height: 18vh;
     background-color: rgb(35, 35, 35);
     color: white;
     border: none;
     text-align: left;
-    padding: 10px 18px;
-    
+    padding: 0px 18px;
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 12.5% 20% 20% 20% 13.75% 13.75%;
+    grid-template-rows: repeat(4, 25%);
 }
 
 .accordian:hover {
@@ -43,44 +46,39 @@
 }
 
 .thumbnail {
-    width: 50px;
     object-fit: contain;
-
-    float: left;
+    width: 100%;
+    grid-column: 1;
+    grid-rows: 1 / span 3;
+    margin: auto;
 }
 
 .fileNumber {
-
-    font-size: .8em;
-    float: left;
-    clear: left;
-    padding: 10px 0 10px 0;
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1em;
 }
 
 .fileInfo {
-    display: inline-block;
-    padding: 0 10px;
-    margin: 0;
-    font-size: 1.2em;
-    white-space: pre-line;
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 1em;
 }
 
 .filePostedDate {
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    font-size: .8rem;
+    grid-column: 2;
+    grid-row: 3;
+    font-size: .8em;
 }
 
 .iconContainer {
-    display: inline-block;
-    position: absolute;
-    right: 0;
+    grid-column: 5 / span 2;
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.icon {
-    padding: 0 5px;
-}
+
 
 .icon.instagram:hover {
     fill: rgb(200, 1, 200);
@@ -99,21 +97,28 @@
 }
 
 .icon.chevronDown, .icon.chevronUp {
-    float: right;
-    padding-top: 25px;
-    padding-right: 0px;
+    grid-column: 6;
+    grid-row: 4;
+    margin-left: auto;
+    width: 20px;
+    height: 20px;
+    margin-top: auto;
 }
 
 .icon.chevronUp.hide {
-    display:none;
+    display: none;
 }
 
 .icon.chevronDown.hide {
-    display:none;
+    display: none;
 }
 
 .icon.archive {
-    display: inline-block;
+    grid-column: 5;
+    grid-row: 4;
+    
+    height: 100%;
+    margin-right: auto;
 }
 
 .icon.archive.hide {

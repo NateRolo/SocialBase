@@ -49,7 +49,7 @@
     object-fit: contain;
     width: 100%;
     grid-column: 1;
-    grid-rows: 1 / span 3;
+    grid-row: 1 / span 3;
     margin: auto;
 }
 

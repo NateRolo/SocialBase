@@ -1,7 +1,7 @@
 var accordians = document.getElementsByClassName("accordian");
 var downChevrons = document.getElementsByClassName("chevronDown");
 var upChevrons = document.getElementsByClassName("chevronUp");
-var archived = document.querySelectorAll(".icon.archive");
+var archiveButtons = document.querySelectorAll(".button.archive");
 
 var igButtons = document.querySelectorAll(".socials.instagram");
 var ytButtons = document.querySelectorAll(".socials.youtube");
@@ -32,7 +32,7 @@ for (let i = 0; i < pageElements; i++){
 }
 
 // alert function for buttons
-function copyButton(platform) {
+function buttonAlert(platform) {
     var copiedPlatform;
     switch (platform) {
         case "Instagram":
@@ -56,16 +56,16 @@ function copyButton(platform) {
 // Social media platform event listeners
 for (let i = 0; i < pageElements; i++) {
     igButtons[i].addEventListener("click", function () {
-        copyButton("Instagram");
+        buttonAlert("Instagram");
     })
     ytButtons[i].addEventListener("click", function () {
-        copyButton("Youtube");
+        buttonAlert("Youtube");
     })
     fbButtons[i].addEventListener("click", function () {
-        copyButton("Facebook");
+        buttonAlert("Facebook");
     })
     ttButtons[i].addEventListener("click", function () {
-        copyButton("TikTok");
+        buttonAlert("TikTok");
     })
 }
 
@@ -75,4 +75,13 @@ for (let i = 0; i < pageElements; i++) {
     ytButtons[i].setAttribute("onclick", "event.stopPropagation()");
     fbButtons[i].setAttribute("onclick", "event.stopPropagation()");
     ttButtons[i].setAttribute("onclick", "event.stopPropagation()");
+    archiveButtons[i].setAttribute("onclick", "event.stopPropagation()");
 }
+
+// set button to green when stored
+for (let i = 0; i < pageElements; i++) {
+    archiveButtons[i].addEventListener("click", function() {
+        archiveButtons[i].classList.toggle("stored");
+    })
+}
+

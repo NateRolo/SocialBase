@@ -1,14 +1,13 @@
 .accordian {
-    width: 100vw;
     height: 18vh;
     background-color: rgb(35, 35, 35);
     color: white;
-    border: none;
     text-align: left;
-    padding: 0px 18px;
-    padding-top: 10px;
+    border-radius: 5%;
+    padding: 10px;
     display: grid;
-    grid-template-columns: 12.5% 20% 20% 20% 13.75% 13.75%;
+    grid-template-columns: 35% 5% 20% 20% 20%;
+    
     grid-template-rows: repeat(4, 25%);
 }
 
@@ -45,40 +44,42 @@
     background-color: rgb(66, 66, 66);
 }
 
-.thumbnail {
-    object-fit: contain;
-    width: 100%;
-    grid-column: 1;
-    grid-row: 1 / span 3;
-    margin: auto;
-}
-
 .fileNumber {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
     font-size: 1em;
 }
 
 .fileInfo {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
     font-size: 1em;
 }
 
 .filePostedDate {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 3;
     font-size: .8em;
 }
 
-.iconContainer {
-    grid-column: 5 / span 2;
-    display: flex;
-    justify-content: space-between;
-
+button.socials {
+    grid-column: 3;
+    height: 80%;
+    background-color: grey;
+    border: none;
+    color: white;
+    border-radius: 5%;
+    z-index: 999;
 }
 
+button.socials:hover {
+    background-color: rgb(179, 179, 179);
+}
 
+button.socials:active{
+    color: white;
+    background-color: rgb(76, 76, 76);
+}
 
 .icon.instagram:hover {
     fill: rgb(200, 1, 200);
@@ -97,7 +98,7 @@
 }
 
 .icon.chevronDown, .icon.chevronUp {
-    grid-column: 6;
+    grid-column: 5;
     grid-row: 4;
     margin-left: auto;
     width: 20px;
@@ -115,10 +116,10 @@
 
 .icon.archive {
     grid-column: 5;
-    grid-row: 4;
-    
+    grid-row: 1;
     height: 100%;
-    margin-right: auto;
+    margin-left: auto;
+    
 }
 
 .icon.archive.hide {

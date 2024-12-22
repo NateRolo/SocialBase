@@ -12,10 +12,61 @@
 }
 
 .subPanel {
-    padding: 18px;
+    
     border: 1px solid white;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: 10% 25% 22.5% 22% 17.5%;
+    
 }
 
 .subPanel:hover {
     background-color: rgb(66, 66, 66);
 }
+
+.caption:not(button), 
+.hashtags {
+    height: 80px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.caption {
+    grid-column: 2;
+}
+
+.subPanel.instagram > .icon {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.copyButtonContainer {
+    grid-column: 4;
+}
+
+.copyButtonContainer > .copy {
+    width: 100%;
+    border: none;
+    border-radius: 5%;
+    margin-top: 5px;
+    background-color: grey;
+    color: white;
+}
+
+.copyButtonContainer > .copy:active {
+    background-color: rgb(87, 87, 87);
+}
+
+.views,
+.likes,
+.comments,
+.shares {
+    text-align: center;
+}
+
+.views > svg {
+    margin: -4.5px;
+    margin-top: 0px;
+}
+

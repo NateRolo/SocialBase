@@ -17,33 +17,6 @@
     cursor: pointer;
 }
 
-.accordian:active {
-    color: black;
-    background-color: rgb(186, 186, 186);
-}
-
-.panel.active {
-    display: block;
-    max-height: 20%;
-    background-color: black;
-    color: white;
-    padding: 0;
-    margin: 0;
-}
-
-.panel {
-    display: none;
-}
-
-.subPanel {
-    padding: 18px;
-    border: 1px solid white;
-}
-
-.subPanel:hover {
-    background-color: rgb(66, 66, 66);
-}
-
 .fileNumber {
     grid-column: 1;
     grid-row: 1;
@@ -70,6 +43,7 @@ button.socials {
     color: white;
     border-radius: 5%;
     z-index: 999;
+    padding: 0;
 }
 
 button.socials:hover {
@@ -77,8 +51,8 @@ button.socials:hover {
 }
 
 button.socials:active{
-    color: white;
-    background-color: rgb(76, 76, 76);
+    color: black;
+    background-color: rgb(189, 189, 189);
 }
 
 .icon.instagram:hover {
@@ -114,12 +88,23 @@ button.socials:active{
     display: none;
 }
 
-.icon.archive {
+.button.archive {
     grid-column: 5;
-    grid-row: 1;
+    grid-row: 1; 
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 0;
+    height: 60%;
+    border-radius: 5%;
+}
+
+.button.archive.stored {
+    background-color: green;
+}
+
+.icon.archive {
     height: 100%;
-    margin-left: auto;
-    
 }
 
 .icon.archive.hide {

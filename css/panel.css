@@ -1,0 +1,21 @@
+.panel.active {
+    display: block;
+    max-height: 20%;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.panel {
+    display: none;
+}
+
+.subPanel {
+    padding: 18px;
+    border: 1px solid white;
+}
+
+.subPanel:hover {
+    background-color: rgb(66, 66, 66);
+}

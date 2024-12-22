@@ -8,7 +8,7 @@ var ytButtons = document.querySelectorAll(".socials.youtube");
 var fbButtons = document.querySelectorAll(".socials.facebook");
 var ttButtons = document.querySelectorAll(".socials.tiktok");
 
-const pageElements = accordians.length;
+var pageElements = accordians.length;
 
 // Open panel if accordian clicked
 for (let i = 0; i < pageElements; i++){
@@ -29,44 +29,6 @@ for (let i = 0; i < pageElements; i++){
 // Assign unique id per accordian
 for (let i = 0; i < pageElements; i++){
     accordians[i].setAttribute("id", "accordian" + i);
-}
-
-// alert function for buttons
-function buttonAlert(platform) {
-    var copiedPlatform;
-    switch (platform) {
-        case "Instagram":
-            copiedPlatform = "Instagram";
-            break;
-        case "Youtube":
-            copiedPlatform = "Youtube";
-            break;
-        case "Facebook":
-            copiedPlatform = "Facebook";
-            break;
-        case "TikTok":
-            copiedPlatform = "TikTok";
-            break;
-        default: 
-            alert("No text was copied");
-    }
-    alert(copiedPlatform + " metadata was copied!");
-}
-
-// Social media platform event listeners
-for (let i = 0; i < pageElements; i++) {
-    igButtons[i].addEventListener("click", function () {
-        buttonAlert("Instagram");
-    })
-    ytButtons[i].addEventListener("click", function () {
-        buttonAlert("Youtube");
-    })
-    fbButtons[i].addEventListener("click", function () {
-        buttonAlert("Facebook");
-    })
-    ttButtons[i].addEventListener("click", function () {
-        buttonAlert("TikTok");
-    })
 }
 
 // set stop propogation for all buttons 

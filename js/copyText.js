@@ -22,6 +22,15 @@ var ytCopy = document.querySelectorAll(".copy.youtube");
 var ttCopy = document.querySelectorAll(".copy.tiktok");
 var fbCopy = document.querySelectorAll(".copy.facebook");
 
+// accordians
+var accordians = document.getElementsByClassName("accordian");
+var pageElements = accordians.length;
+
+// buttons
+var igButtons = document.querySelectorAll(".socials.instagram");
+var ytButtons = document.querySelectorAll(".socials.youtube");
+var fbButtons = document.querySelectorAll(".socials.facebook");
+var ttButtons = document.querySelectorAll(".socials.tiktok");
 
 // copy function
 async function copyText(text) {

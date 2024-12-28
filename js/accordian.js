@@ -1,3 +1,6 @@
+import { getFirestore, collection, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js';
+import { app } from './firebase_API.js';
+
 var accordians = document.getElementsByClassName("accordian");
 var downChevrons = document.getElementsByClassName("chevronDown");
 var upChevrons = document.getElementsByClassName("chevronUp");
@@ -11,11 +14,11 @@ var ttButtons = document.querySelectorAll(".socials.tiktok");
 var pageElements = accordians.length;
 
 // Open panel if accordian clicked
-for (let i = 0; i < pageElements; i++){
-    accordians[i].addEventListener("click", function() {
+for (let i = 0; i < pageElements; i++) {
+    accordians[i].addEventListener("click", function () {
         var panel = this.nextElementSibling;
         panel.classList.toggle("active");
-        
+
         // toggle downChevron
         var downChevron = downChevrons[i];
         downChevron.classList.toggle("hide");
@@ -27,7 +30,7 @@ for (let i = 0; i < pageElements; i++){
 };
 
 // Assign unique id per accordian
-for (let i = 0; i < pageElements; i++){
+for (let i = 0; i < pageElements; i++) {
     accordians[i].setAttribute("id", "accordian" + i);
 }
 
@@ -42,8 +45,31 @@ for (let i = 0; i < pageElements; i++) {
 
 // set button to green when stored
 for (let i = 0; i < pageElements; i++) {
-    archiveButtons[i].addEventListener("click", function() {
+    archiveButtons[i].addEventListener("click", function () {
         archiveButtons[i].classList.toggle("stored");
     })
 }
 
+// get likes
+const db = getFirestore(app);
+const docRef = doc(db, "posts", "testPost1");
+
+
+
+
+// populate likes to appropriate panel 
+async function populateLikes() {
+    try {
+        const likesSection = document.getElementsByClassName("likes");
+        const doc = await getDoc(docRef);
+        console.log("Cached document data:", doc.data());
+        for (let i = 0; i < likesSection.length; i++) {
+            likesSection[i].insertAdjacentHTML("beforeend", doc.data().likes);
+        }
+    }
+    catch (e) {
+        console.log("Error: ", e);
+    }
+};
+
+populateLikes();

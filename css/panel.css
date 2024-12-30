@@ -62,7 +62,7 @@
 .likes,
 .comments,
 .shares {
-    text-align: center;
+    text-align: justify;
 }
 
 .views > svg {

@@ -3,8 +3,6 @@ nav {
     bottom: 0;
     background-color: grey;
     width: 100vw;
-    height: minmax(30px, 25%);
-    
 }
 
 #navbarContainer {

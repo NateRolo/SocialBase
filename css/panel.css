@@ -35,7 +35,7 @@
     grid-column: 2;
 }
 
-.subPanel.instagram > .icon {
+.subPanel > .icon {
     width: 50%;
     height: 50%;
     margin: auto;

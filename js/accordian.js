@@ -1,4 +1,4 @@
-import { getFirestore, collection, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js';
+import { getFirestore, collection, doc, setDoc, getDocs, query, where } from 'https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js';
 import { app } from './firebase_API.js';
 
 var accordians = document.getElementsByClassName("accordian");
@@ -50,26 +50,42 @@ for (let i = 0; i < pageElements; i++) {
     })
 }
 
-// get likes
+// gets snapshot of entire collection 
 const db = getFirestore(app);
-const docRef = doc(db, "posts", "testPost1");
+const postsSnap = await getDocs(collection(db, "posts"));
+
+// adds objects to array 
+var postsArray = [];
+postsSnap.forEach((doc) => {
+    postsArray.push({
+        id: doc.id,
+        data: doc.data
+    })
+})
+
+console.log(postsArray[0].id);
 
 
 
 
-// populate likes to appropriate panel 
-async function populateLikes() {
-    try {
-        const likesSection = document.getElementsByClassName("likes");
-        const doc = await getDoc(docRef);
-        console.log("Cached document data:", doc.data());
-        for (let i = 0; i < likesSection.length; i++) {
-            likesSection[i].insertAdjacentHTML("beforeend", doc.data().likes);
-        }
-    }
-    catch (e) {
-        console.log("Error: ", e);
-    }
-};
 
-populateLikes();
+// populate information into accordian
+
+
+// populate likes to appropriate panel
+// async function populateLikes() {
+// try {
+//     const likesSection = document.getElementsByClassName("likes");
+//     const doc = await getDoc(docRef);
+//     console.log("Cached document data:", doc.data());
+//         for (let i = 0; i < likesSection.length; i++) {
+//             likesSection[i].insertAdjacentHTML("beforeend", doc.data().likes);
+//         }
+//     }
+//     catch (e) {
+//         console.log("Error: ", e);
+//     }
+// };
+
+// populateLikes();
+

@@ -96,7 +96,7 @@ export function addCopyTextFunction(pageElements, igCaptions, igHashtags, igCopy
         let thisHashtag = document.getElementById("igHashtag-" + i).textContent;
         let allData = thisCaption + "\n" + thisHashtag;
 
-        let copyCaptionButton = document.getElementById("igCopyCaption-" + i);
+        let copyCaptionButton = document.getElementById("igCopyCaption-" + i); // 12/29 getting error that this variable is null
         copyCaptionButton.addEventListener("click", () =>
             copyText(thisCaption));
 

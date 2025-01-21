@@ -91,7 +91,7 @@ export function assignButtonId(pageElements, igCopy) {
 }
 // Assign copy text buttons (instagram only)
 export function addCopyTextFunction(pageElements, igCaptions, igHashtags, igCopy) {
-    for (let i = 0; i < pageElements; i++) {
+    for (let i = 0; i < pageElements; i += 3) {
         let thisCaption = document.getElementById("igCaption-" + i).textContent;
         let thisHashtag = document.getElementById("igHashtag-" + i).textContent;
         let allData = thisCaption + "\n" + thisHashtag;
